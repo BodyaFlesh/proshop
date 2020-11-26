@@ -1,0 +1,12 @@
+version: '3'
+services: 
+    db:
+        image: 'mongo:4.4.2-bionic'
+        container_name: mongo-db
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: password
+            MONGO_INITDB_DATABASE: proshop
+        ports:
+            - 27017:27017
